@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server": "json-server server.json -w -d 758 -p 3333"
   },
   "dependencies": {
     "date-fns": "^2.21.1",
