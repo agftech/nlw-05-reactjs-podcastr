@@ -1,26 +1,28 @@
+import styles from "./styles.module.scss";
+
 export function Player() {
   return (
-    <div>
+    <div className={styles.playerContainer}>
       <header>
         <img src="/playing.svg" alt="Tocando agora" />
         <strong>Tocando agora</strong>
       </header>
 
-      <div>
+      <div className={styles.emptyPlayer}>
         <strong>Selecione um podcast para ouvir</strong>
       </div>
 
-      <footer>
-        <div>
+      <footer className={styles.empty}>
+        <div className={styles.progress}>
           <span>00:00</span>
-          <div>
-            <div />
+          <div className={styles.slider}>
+            <div className={styles.emptySlider} />
           </div>
 
           <span>00:00</span>
         </div>
 
-        <div>
+        <div className={styles.buttons}>
           <button>
             <img src="/shuffle.svg" alt="Embaralhar" />
           </button>
@@ -29,7 +31,7 @@ export function Player() {
             <img src="/play-previous.svg" alt="Tocar anterior" />
           </button>
 
-          <button>
+          <button className={styles.playbutton}>
             <img src="/play.svg" alt="Tocar" />
           </button>
 
