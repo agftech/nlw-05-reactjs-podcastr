@@ -1,6 +1,8 @@
+import styles from './styles.module.scss';
+
 export function Header() {
   return (
-    <header>
+    <header className={styles.headerContainer}>
       <img src="/logo.svg" alt="Podcastr" />
 
       <p>o melhor para você ouvir, sempre</p>
@@ -9,3 +11,5 @@ export function Header() {
     </header>
   );
 }
+
+export default Header;
