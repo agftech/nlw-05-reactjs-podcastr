@@ -30,7 +30,7 @@
 <p align="center">
   <a href="#package-summary"><img src="https://img.shields.io/badge/Summary-04d361?style=for-the-badge"/></a>&nbsp;&nbsp;
   <a href="#rocket-technologies"><img src="https://img.shields.io/badge/Technologies-04d361?style=for-the-badge"/></a>&nbsp;&nbsp;
-  <a href="#👷-run-project"><img src="https://img.shields.io/badge/Run Project-04d361?style=for-the-badge"/></a>&nbsp;&nbsp;
+  <a href="#-run-project"><img src="https://img.shields.io/badge/Run Project-04d361?style=for-the-badge"/></a>&nbsp;&nbsp;
   <a href="#memo-license"><img src="https://img.shields.io/badge/License-04d361?style=for-the-badge"/></a>
 </p>
 
