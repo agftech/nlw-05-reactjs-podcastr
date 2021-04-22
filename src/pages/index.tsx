@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 
 export default function Home(props) {
   return (
@@ -8,7 +9,7 @@ export default function Home(props) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch("http://localhost:3333/episodes");
   const data = await response.json();
 
