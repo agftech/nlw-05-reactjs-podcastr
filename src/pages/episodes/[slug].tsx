@@ -9,6 +9,8 @@ import { format, parseISO } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString";
 
+import styles from "./episode.module.scss";
+
 type Episode = {
   id: string;
   title: string;
@@ -29,8 +31,8 @@ export default function Episode({ episode }: EpisodeProps) {
   const router = useRouter();
 
   return (
-    <div>
-      <div>
+    <div className={styles.episode}>
+      <div className={styles.thumbnailContainer}>
         <Link href="/">
           <button type="button">
             <img src="/arrow-left.svg" alt="Voltar" />
@@ -54,7 +56,10 @@ export default function Episode({ episode }: EpisodeProps) {
         <span>{episode.durationAsString}</span>
       </header>
 
-      <div dangerouslySetInnerHTML={{ __html: episode.description }} />
+      <div
+        className={styles.description}
+        dangerouslySetInnerHTML={{ __html: episode.description }}
+      />
     </div>
   );
 }
