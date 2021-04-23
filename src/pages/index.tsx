@@ -6,6 +6,8 @@ import { format, parseISO } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { convertDurationToTimeString } from "../utils/convertDurationToTimeString";
 
+import styles from "./home.module.scss";
+
 type Episode = {
   id: string;
   title: string;
@@ -23,8 +25,8 @@ type HomeProps = {
 
 export default function Home({ latestEpisodes }: HomeProps) {
   return (
-    <div>
-      <section>
+    <div className={styles.homepage}>
+      <section className={styles.latestEpisodes}>
         <h2>Últimos Lançamentos</h2>
         <ul>
           {latestEpisodes.map((episode) => {
@@ -38,7 +40,7 @@ export default function Home({ latestEpisodes }: HomeProps) {
                   objectFit="cover"
                 />
 
-                <div>
+                <div className={styles.episodeDetails}>
                   <Link href={`/episodes/${episode.id}`}>
                     <a>{episode.title}</a>
                   </Link>
