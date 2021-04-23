@@ -58,7 +58,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
         </ul>
       </section>
 
-      <section>
+      <section className={styles.allEpisodes}>
         <h2>Todos episódios</h2>
 
         <table cellSpacing={0}>
