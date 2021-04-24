@@ -57,22 +57,26 @@ export function Player() {
 
         <div className={styles.buttons}>
           <button>
-            <img src="/shuffle.svg" alt="Embaralhar" />
+            <img src="/shuffle.svg" alt="Embaralhar" disabled={!episode} />
           </button>
 
-          <button>
+          <button type="button" disabled={!episode}>
             <img src="/play-previous.svg" alt="Tocar anterior" />
           </button>
 
-          <button className={styles.playbutton}>
+          <button
+            type="button"
+            className={styles.playbutton}
+            disabled={!episode}
+          >
             <img src="/play.svg" alt="Tocar" />
           </button>
 
-          <button>
+          <button type="button" disabled={!episode}>
             <img src="/play-next.svg" alt="Tocat proxima" />
           </button>
 
-          <button>
+          <button type="button" disabled={!episode}>
             <img src="/repeat.svg" alt="Repetir" />
           </button>
         </div>
