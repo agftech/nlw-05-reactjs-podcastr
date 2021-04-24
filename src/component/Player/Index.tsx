@@ -8,7 +8,9 @@ import "rc-slider/assets/index.css";
 import styles from "./styles.module.scss";
 
 export function Player() {
-  const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
+  const { episodeList, currentEpisodeIndex, isPlaying } = useContext(
+    PlayerContext
+  );
 
   const episode = episodeList[currentEpisodeIndex];
 
@@ -55,9 +57,11 @@ export function Player() {
           <span>00:00</span>
         </div>
 
+        {episode && <audio src={episode.url} autoPlay />}
+
         <div className={styles.buttons}>
-          <button>
-            <img src="/shuffle.svg" alt="Embaralhar" disabled={!episode} />
+          <button disabled={!episode}>
+            <img src="/shuffle.svg" alt="Embaralhar" />
           </button>
 
           <button type="button" disabled={!episode}>
@@ -69,7 +73,11 @@ export function Player() {
             className={styles.playbutton}
             disabled={!episode}
           >
-            <img src="/play.svg" alt="Tocar" />
+            {isPlaying ? (
+              <img src="/pause.svg" alt="Pausar" />
+            ) : (
+              <img src="/play.svg" alt="Tocar" />
+            )}
           </button>
 
           <button type="button" disabled={!episode}>
