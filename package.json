@@ -9,7 +9,7 @@
     "server": "json-server server.json -w -d 758 -p 3333"
   },
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "date-fns": "^2.21.1",
     "next": "12.1.0",
     "rc-slider": "^9.7.2",
